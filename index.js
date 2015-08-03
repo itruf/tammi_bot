@@ -34,13 +34,6 @@ app.get('/hook', function(request, response) {
             });
         });
     });
-    
-   var post_req = http.request(post_options, function(res) {
-      res.setEncoding('utf8');
-      res.on('data', function (chunk) {
-          response.send('Response: ' + chunk);
-      });
-  });
 })
 
 app.get('/', function(request, response) {
