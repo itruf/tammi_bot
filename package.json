@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "express": "^4.0.0",
-    "telegram-api":"*"
+    "telegram-api":"*",
+    "node-telegram-bot-api":"*"
   },
   "engines": {
     "node": "0.12.x",
