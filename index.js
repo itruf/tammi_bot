@@ -7,9 +7,9 @@ var http = require("http");
 var VowTelegramBot = require('vow-telegram-bot'),
     bot = new VowTelegramBot({
         token: '122550858:AAGfRzH0ikp6YqLCXr4hQ-yWEUtfu1NfN-M',
-        polling: {
-            timeout: 3,
-            limit: 100
+        webhook: {
+            url: 'http://tammi-bot.herokuapp.com/',
+            port: 3333 // listen http requests on port 3333 (ssl maybe configured in nginx)
         }
     });
 
