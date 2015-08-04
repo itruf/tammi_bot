@@ -1,45 +1,26 @@
-var express = require('express')
-var app = express()
-var https = require('https');
+var Bot = require('telegram-api');
+var Message = require('telegram-api/types/Message');
+var File = require('telegram-api/types/File');
 
-var hostTelgram = "api.telegram.org"
-var telegramPathBasic = "/bot122550858:AAGfRzH0ikp6YqLCXr4hQ-yWEUtfu1NfN-M/"
+var bot = new Bot({
+  token: 'bot122550858:AAGfRzH0ikp6YqLCXr4hQ-yWEUtfu1NfN-M'
+});
 
-//Basic URL's
-/*
-	https://api.telegram.org/bot122550858:AAGfRzH0ikp6YqLCXr4hQ-yWEUtfu1NfN-M/sendMessage?chat_id=159371&text=eee
-	
-*/
+bot.start();
 
-app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/public'))
+bot.get(/Hi|Hey|Hello|Yo/, function(message) {
+  var answer = new Message().text('Hello, Sir').to(message.chat.id);
 
-app.get('/hook', function(request, response) {
-	https.get({
-        host: 'api.telegram.org',
-        path: telegramPathBasic + 'sendMessage?chat_id=159371&text=eee'
-    }, function(response) {
-        // Continuously update stream with data
-        var body = '';
-        response.on('data', function(d) {
-            body += d;
-        });
-        response.on('end', function() {
+  bot.send(answer);
+});
 
-            // Data reception is done, do whatever with it!
-            var parsed = JSON.parse(body);
-            callback({
-                email: parsed.email,
-                password: parsed.pass
-            });
-        });
-    });
-})
+bot.command('start', function(message) {
+  var welcome = new File().file('./some_photo.png').caption('Welcome').to(message.chat.id);
 
-app.get('/', function(request, response) {
-  response.send('Hello World!')
-})
+  bot.send(welcome);
+});
 
-app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port'))
+// Arguments, see: https://github.com/mdibaiee/node-telegram-api/wiki/Commands
+bot.command('weather <city> [date]', function(message) {
+  console.log(message.args.city, message.args.date);
 })
