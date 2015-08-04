@@ -1,23 +1,28 @@
 {
-  "name": "node-js-sample",
-  "version": "0.2.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "tammi_bot",
+  "version": "1.0.0",
+  "description": "Tammi bot for telegram",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "test"
   },
   "dependencies": {
-    "express": "^4.0.0",
-    "telegram-api":"*",
-    "node-telegram-bot-api":"*"
+    "telegram-api": "^0.5.22"
   },
   "engines": {
-    "node": "0.12.x",
-    "npm":  "2.2.x"
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://itruf@github.com/itruf/tammi_bot.git"
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ]
+    "tammi"
+  ],
+  "author": "Ivan Trufanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itruf/tammi_bot/issues"
+  },
+  "homepage": "https://github.com/itruf/tammi_bot#readme"
 }
