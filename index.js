@@ -19,7 +19,14 @@ bot.on('message', function(message) {
 
     console.log(from.first_name + ' ' + from.last_name + ': ' + message.text);
     
-    if (message.text === '/go') { //Команда создания поездки (/go)
+    if (message.text === '/start') {
+	    bot.sendMessage({
+	        chat_id: message.chat.id,
+	        text: 'Привет! Меня зовут Tammi и я умею рассчитать, каким такси дешевле поехать. Просто отправь команду /go, чтобы начать.'
+	    }).then(function(message) {
+	        console.log('Message sent', message);
+	    });
+    } else if (message.text === '/go') { //Команда создания поездки (/go)
 	    delete startLocations[message.chat.id];
 	    delete endLocations[message.chat.id];
 	    
