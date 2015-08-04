@@ -1,0 +1,162 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'concurrently' ]
+2 info using npm@2.11.3
+3 info using node@v0.12.7
+4 verbose install initial load of /usr/local/lib/package.json
+5 verbose readDependencies loading dependencies from /usr/local/lib/package.json
+6 silly cache add args [ 'concurrently', null ]
+7 verbose cache add spec concurrently
+8 silly cache add parsed spec { raw: 'concurrently',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'concurrently',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed concurrently@*
+10 verbose addNamed "*" is a valid semver range for concurrently
+11 silly addNameRange { name: 'concurrently', range: '*', hasData: false }
+12 silly mapToRegistry name concurrently
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/concurrently
+16 verbose addNameRange registry:https://registry.npmjs.org/concurrently not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/concurrently
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 01:50:37
+20 verbose request id 142d8667cb8c3185
+21 http request GET https://registry.npmjs.org/concurrently
+22 http 200 https://registry.npmjs.org/concurrently
+23 silly get cb [ 200,
+23 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+23 silly get     etag: '"9BGPCS63MPR9K98NSJSJ30YQW"',
+23 silly get     'content-type': 'application/json',
+23 silly get     'cache-control': 'max-age=60',
+23 silly get     'content-length': '11711',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Tue, 04 Aug 2015 22:50:27 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '0',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-ams4143-AMS',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1438728627.605315,VS0,VE95',
+23 silly get     vary: 'Accept' } ]
+24 verbose get saving concurrently to /Users/itruf/.npm/registry.npmjs.org/concurrently/.cache.json
+25 silly addNameRange number 2 { name: 'concurrently', range: '*', hasData: true }
+26 silly addNameRange versions [ 'concurrently',
+26 silly addNameRange   [ '0.0.2', '0.0.3', '0.0.4', '0.0.5', '0.1.0', '0.1.1' ] ]
+27 silly addNamed concurrently@0.1.1
+28 verbose addNamed "0.1.1" is a plain semver version for concurrently
+29 silly mapToRegistry name concurrently
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/concurrently
+33 verbose addRemoteTarball https://registry.npmjs.org/concurrently/-/concurrently-0.1.1.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/concurrently/-/concurrently-0.1.1.tgz',
+34 verbose addRemoteTarball   '0cf319104c6421c49485d42293c1f89cb22eae73' ]
+35 info retry fetch attempt 1 at 01:50:38
+36 info attempt registry request try #1 at 01:50:38
+37 http fetch GET https://registry.npmjs.org/concurrently/-/concurrently-0.1.1.tgz
+38 http fetch 200 https://registry.npmjs.org/concurrently/-/concurrently-0.1.1.tgz
+39 silly fetchAndShaCheck shasum 0cf319104c6421c49485d42293c1f89cb22eae73
+40 verbose addTmpTarball /var/folders/5b/cwp1k25d37lgxr23sp9hp30h0000gn/T/npm-24408-d04429e0/registry.npmjs.org/concurrently/-/concurrently-0.1.1.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for concurrently@0.1.1
+42 silly cache afterAdd concurrently@0.1.1
+43 verbose afterAdd /Users/itruf/.npm/concurrently/0.1.1/package/package.json not in flight; writing
+44 verbose afterAdd /Users/itruf/.npm/concurrently/0.1.1/package/package.json written
+45 silly install resolved [ { name: 'concurrently',
+45 silly install resolved     version: '0.1.1',
+45 silly install resolved     description: 'Run commands concurrently',
+45 silly install resolved     main: 'src/main.js',
+45 silly install resolved     bin: { concurrent: './src/main.js' },
+45 silly install resolved     scripts: { test: 'mocha' },
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'https://github.com/kimmobrunfeldt/concurrently.git' },
+45 silly install resolved     keywords:
+45 silly install resolved      [ 'bash',
+45 silly install resolved        'concurrent',
+45 silly install resolved        'parallel',
+45 silly install resolved        'concurrently',
+45 silly install resolved        'command',
+45 silly install resolved        'sh' ],
+45 silly install resolved     author: { name: 'Kimmo Brunfeldt' },
+45 silly install resolved     license: 'MIT',
+45 silly install resolved     bugs: { url: 'https://github.com/kimmobrunfeldt/concurrently/issues' },
+45 silly install resolved     homepage: 'https://github.com/kimmobrunfeldt/concurrently',
+45 silly install resolved     dependencies:
+45 silly install resolved      { bluebird: '2.9.6',
+45 silly install resolved        chalk: '0.5.1',
+45 silly install resolved        commander: '2.6.0',
+45 silly install resolved        'cross-spawn': '^0.2.9',
+45 silly install resolved        lodash: '3.1.0',
+45 silly install resolved        rx: '2.3.24' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { chai: '^1.10.0',
+45 silly install resolved        mocha: '^2.1.0',
+45 silly install resolved        mustache: '^1.0.0',
+45 silly install resolved        semver: '^4.2.0',
+45 silly install resolved        'shell-quote': '^1.4.3',
+45 silly install resolved        shelljs: '^0.3.0',
+45 silly install resolved        string: '^3.0.0' },
+45 silly install resolved     _id: 'concurrently@0.1.1',
+45 silly install resolved     _shasum: '0cf319104c6421c49485d42293c1f89cb22eae73',
+45 silly install resolved     _from: 'concurrently@*',
+45 silly install resolved     _npmVersion: '1.4.9',
+45 silly install resolved     _npmUser: { name: 'kimmobrunfeldt', email: 'kimmo.brunfeldt@gmail.com' },
+45 silly install resolved     maintainers: [ [Object] ],
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '0cf319104c6421c49485d42293c1f89cb22eae73',
+45 silly install resolved        tarball: 'http://registry.npmjs.org/concurrently/-/concurrently-0.1.1.tgz' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/concurrently/-/concurrently-0.1.1.tgz' } ]
+46 info install concurrently@0.1.1 into /usr/local/lib
+47 info installOne concurrently@0.1.1
+48 verbose installOne of concurrently to /usr/local/lib not in flight; installing
+49 verbose lock using /Users/itruf/.npm/_locks/concurrently-34174c7e9d25502c.lock for /usr/local/lib/node_modules/concurrently
+50 silly install write writing concurrently 0.1.1 to /usr/local/lib/node_modules/concurrently
+51 verbose unbuild lib/node_modules/concurrently
+52 silly gentlyRm /usr/local/lib/node_modules/concurrently is being purged from base /usr/local
+53 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/concurrently
+54 verbose tar unpack /Users/itruf/.npm/concurrently/0.1.1/package.tgz
+55 verbose tar unpacking to /usr/local/lib/node_modules/concurrently
+56 silly gentlyRm /usr/local/lib/node_modules/concurrently is being purged
+57 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/concurrently
+58 silly gunzTarPerm modes [ '755', '644' ]
+59 error tar.unpack untar error /Users/itruf/.npm/concurrently/0.1.1/package.tgz
+60 verbose unlock done using /Users/itruf/.npm/_locks/concurrently-34174c7e9d25502c.lock for /usr/local/lib/node_modules/concurrently
+61 verbose fstream_path /usr/local/lib/node_modules/concurrently
+62 verbose fstream_type Directory
+63 verbose fstream_class DirWriter
+64 verbose stack Error: EACCES, mkdir '/usr/local/lib/node_modules/concurrently'
+64 verbose stack     at Error (native)
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25
+65 verbose fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53
+65 verbose fstream_stack FSReqWrap.oncomplete (fs.js:95:15)
+66 verbose cwd /Users/itruf/Documents/Work/Projects/Active projects/tammi/bot/tammi_bot
+67 error Darwin 14.4.0
+68 error argv "node" "/usr/local/bin/npm" "install" "-g" "concurrently"
+69 error node v0.12.7
+70 error npm  v2.11.3
+71 error path /usr/local/lib/node_modules/concurrently
+72 error code EACCES
+73 error errno -13
+74 error Error: EACCES, mkdir '/usr/local/lib/node_modules/concurrently'
+74 error     at Error (native)
+74 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/concurrently']
+74 error   errno: -13,
+74 error   code: 'EACCES',
+74 error   path: '/usr/local/lib/node_modules/concurrently',
+74 error   fstream_type: 'Directory',
+74 error   fstream_path: '/usr/local/lib/node_modules/concurrently',
+74 error   fstream_class: 'DirWriter',
+74 error   fstream_stack:
+74 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:35:25',
+74 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:47:53',
+74 error      'FSReqWrap.oncomplete (fs.js:95:15)' ] }
+75 error Please try running this command again as root/Administrator.
+76 verbose exit [ -13, true ]
+77 verbose unbuild lib/node_modules/concurrently
+78 silly gentlyRm /usr/local/lib/node_modules/concurrently is being purged from base /usr/local
+79 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/concurrently
