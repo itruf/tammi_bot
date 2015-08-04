@@ -7,7 +7,6 @@
     "test": "test"
   },
   "dependencies": {
-    "bcrypt": "^0.8.4",
     "vow-telegram-bot": "^0.1.0"
   },
   "engines": {
