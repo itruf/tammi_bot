@@ -7,10 +7,12 @@
     "test": "test"
   },
   "dependencies": {
+	
     "vow-telegram-bot": "^0.1.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.10.x",
+    "npm":"*"
   },
   "repository": {
     "type": "git",
