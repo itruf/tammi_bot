@@ -7,7 +7,6 @@
     "test": "test"
   },
   "dependencies": {
-    "telegram-api": "^0.5.22",
     "vow-telegram-bot": "^0.1.0"
   },
   "engines": {
